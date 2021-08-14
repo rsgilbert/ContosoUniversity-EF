@@ -40,7 +40,7 @@ namespace ContosoUniversity
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -54,3 +54,4 @@ namespace ContosoUniversity
         }
     }
 }
+

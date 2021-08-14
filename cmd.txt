@@ -1,0 +1,4 @@
+// Create project
+// See: https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-5.0&tabs=visual-studio-code
+dotnet new webapp -o ContosoUniversity
+

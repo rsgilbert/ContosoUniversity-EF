@@ -2,3 +2,24 @@
 // See: https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-5.0&tabs=visual-studio-code
 dotnet new webapp -o ContosoUniversity
 
+// Add entity framework packages
+dotnet add package Microsoft.EntityFrameworkCore.SQLite 
+
+// Required for scafolding
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer 
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools 
+
+// Required for scafolding
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design 
+dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 
+
+// Globally install scafolding tool 
+dotnet tool install --global dotnet-aspnet-codegenerator
+
+// Scaffold SchoolContext and student pages 
+// Creates razor pages in Pages/Students
+// Creates Data/SchoolContext.cs 
+// Adds the context to Dependency Injection in Startup.cs 
+// Adds a database connection string in appsettings.json 
+dotnet aspnet-codegenerator razorpage -m Student -dc ContosoUniversity.Data.SchoolContext -udl -outDir Pages/Students --referenceScriptLibraries -sqlite

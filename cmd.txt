@@ -23,3 +23,6 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 // Adds the context to Dependency Injection in Startup.cs 
 // Adds a database connection string in appsettings.json 
 dotnet aspnet-codegenerator razorpage -m Student -dc ContosoUniversity.Data.SchoolContext -udl -outDir Pages/Students --referenceScriptLibraries -sqlite
+
+// 15/Aug/21
+// Resume guide, Migrations: https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/migrations?view=aspnetcore-5.0&tabs=visual-studio
